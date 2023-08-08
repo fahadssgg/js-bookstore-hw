@@ -31,7 +31,13 @@ let books = [
     available: true,
   },
 ];
-
+console.log("=-=-=-=--=title-=-=-author=--=page-=-=-=-=-=-=-=-=-=-=");
+books.forEach((book) => {
+  console.log("title:" + book.title);
+  console.log("author:" + book.author);
+  console.log("pages:" + book.pages);
+  console.log("---------------------");
+});
 console.log("=-=-=-=--=-=-=-=--=borrowBook-=-=-=-=-=-=-=-=-=-=");
 
 function borrowBook(book_name, borrower_name) {
@@ -131,10 +137,3 @@ console.log("---------------------");
 console.log(searchBook("dom for me"));
 console.log("---------------------");
 console.log(searchBook("jorsh"));
-
-console.log("=-=-=-=--=title-=-=-author=--=page-=-=-=-=-=-=-=-=-=-=");
-const TAP = books.forEach((element) => {
-  delete element.available;
-  delete element.borrower;
-  console.log(element);
-});
